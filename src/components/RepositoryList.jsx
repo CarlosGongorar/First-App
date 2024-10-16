@@ -1,18 +1,15 @@
 import React from "react"
-import {FlatList, View, Text} from "react-native"
+import {FlatList, Text} from "react-native"
 import repositories from "../data/repositories.js"
+import RepositoryItem from "./RepositoryItem.jsx"
 
 const RepositoryList = () => {
     return(
         <FlatList 
         data={repositories} 
+        ItemSeparatorComponent={() =><Text></Text>}
         renderItem={({item: repo}) => (
-            <View key={repo.id}>
-                <Text>Id: {repo.id}</Text>
-                <Text>Nombre: {repo.nombre}</Text>
-                <Text>Email: {repo.email}</Text>
-                <Text>Telefono: {repo.telefono}</Text>
-            </View>
+            <RepositoryItem {... repo}/>
         )}
         />
     )
