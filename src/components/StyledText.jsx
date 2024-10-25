@@ -20,16 +20,29 @@ const styles = StyleSheet.create({
     },
     subheading: {
         fontSize: theme.fontSize.subheading
+    },
+    textAlignCenter: {
+        textAlign: "center"
+    },
+    flexDirection: {
+        flexDirection: "row"
+    },
+    justifyContent: {
+        justifyContent: "space-around"
     }
 })
 
-export default function StyledText ({children, color, fontSize, fontWeight, style, ...restOfProps}) {
+export default function StyledText ({children, color, fontSize, align, flexDirection, justifyContent, fontWeight, style, ...restOfProps}) {
     const textStyles = [
         styles.text,
+        justifyContent === "space-around" && styles.justifyContent,
+        flexDirection === "row" && styles.flexDirection,
+        align === "center" && styles.textAlignCenter,
         color === "primary" && styles.colorPrimary,
         color === "secondary" && styles.colorSecondary,
         fontWeight === "bold" && styles.bold,
-        fontSize === "subheading" && styles.subheading
+        fontSize === "subheading" && styles.subheading,
+        style
     ]
     
     return (

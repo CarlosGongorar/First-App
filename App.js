@@ -2,5 +2,5 @@ import { Alert, StyleSheet, Text, View, TouchableWithoutFeedback, TouchableNativ
 import Main from './src/components/Main.jsx';
 
 export default function App() {
-  return <Main/>
+  return <Main />
 }
