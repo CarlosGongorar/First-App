@@ -7,7 +7,6 @@ const Main = () => {
     return (
         <View style={{flex: 1}}>
             <AppBar/>
-            <Text>Rate Repository Application</Text>
             <RepositoryList/>
         </View>
     )
