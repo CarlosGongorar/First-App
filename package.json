@@ -15,10 +15,12 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.74.5",
-    "react-native-web": "~0.19.10"
+    "react-native-web": "~0.19.10",
+    "react-router-native": "^6.27.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
+    "@expo/webpack-config": "^19.0.1",
     "babel-eslint": "^10.1.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-config-standard-jsx": "^11.0.0",
@@ -30,7 +32,11 @@
   },
   "private": true,
   "eslintConfig": {
-    "parser" : "babel-eslint",
-    "extends" :["standard", "standard-jsx", "standard-react"]
+    "parser": "babel-eslint",
+    "extends": [
+      "standard",
+      "standard-jsx",
+      "standard-react"
+    ]
   }
 }

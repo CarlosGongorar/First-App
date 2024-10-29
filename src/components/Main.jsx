@@ -1,14 +1,18 @@
 import React from 'react'
-import Constants from 'expo-constants'
 import {Text, View} from 'react-native'
 import RepositoryList from './RepositoryList.jsx'
 import AppBar from './AppBar.jsx'
+import { Navigate, Route, Routes } from 'react-router-native'
+
 const Main = () => {
     return (
         <View style={{flex: 1}}>
-            <AppBar/>
-            <Text>Rate Repository Application</Text>
-            <RepositoryList/>
+            <AppBar />
+            <Routes>
+                <Route path='/' element={<RepositoryList />} />
+                <Route path='/signin' element={<Text>Sign In</Text>} />
+                <Route path='*' element={<Navigate to='/' />} />
+            </Routes>
         </View>
     )
 }
