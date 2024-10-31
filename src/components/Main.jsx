@@ -1,7 +1,7 @@
 import React from 'react'
 import {Text, View} from 'react-native'
 import RepositoryList from './RepositoryList.jsx'
-import AppBar from './AppBar.jsx'
+import AppBar from './AppBar'
 import { Navigate, Route, Routes } from 'react-router-native'
 
 const Main = () => {
