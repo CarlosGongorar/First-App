@@ -5,9 +5,9 @@ import RepositoryStats from "./RepositoryStats.jsx"
 import theme from "../theme.js"
 
 // ParseThousands
-const RepositoryItemHeader = ({img, nombre, language} ) => (
+const RepositoryItemHeader = ({ownerAvatarUrl, nombre, language} ) => (
     <View style={{flexDirection: "row", alignItems: "center"}}>
-        <Image style={styles.image} source={{uri: img}}></Image>
+        <Image style={styles.image} source={{uri: ownerAvatarUrl}}></Image>
         <View>
             <StyledText color="primary" fontSize="subheading" fontWeight="bold">Nombre: {nombre}</StyledText>
             <StyledText style={styles.language}> Hola</StyledText>
